@@ -1,8 +1,15 @@
 .about-content {
     width: 1000px;
     height: 100%;
+    margin-left: 50px;
+    padding-bottom: 50px;
 }
 
+.about-content-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .about-me {
     text-align: center;
     font-size: 2.3rem;
@@ -59,6 +66,76 @@
             line-height: 44px;
             &:hover {
                 color: var(--primary-color);
+            }
+        }
+    }
+}
+
+.our-services {
+    padding-top: 70px;
+
+    .our-services-items{
+        display: flex;
+        .our-services-item {
+            flex-basis: 50%;
+            padding: 16px 28px;
+            .our-services-crad {
+                height: 100%;
+                padding: 30px;
+                background-color: var(--background-color);
+                border: solid none;
+                border-radius: 25px;
+                .card-icon {
+                    font-size: 5rem;
+                    color: var(--primary-color);
+                }
+                .card-name {
+                    font-size: 1.6rem;
+                    color: var(--primary-text-color);
+                    margin: 10px 0 15px 0;
+                }
+                .card-content {
+                    font-size: 1.5rem;
+                    color: var(--primary-text-main-color);
+                    margin-bottom: 15px;
+                    line-height: 1.7;
+                }
+            }
+        }
+    }
+}
+.about-title {
+    font-size: 2rem;
+    padding: 16px 28px;
+    color: var(--primary-color);
+    span {
+        color: var(--primary-text-color);
+    }
+}
+.fun-fact {
+    padding-top: 70px;
+}
+.fun-fact-items {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.4rem;
+    color: var(--primary-text-color);
+    text-align: center;
+    i {
+        font-size: 3rem;
+        color: var(--primary-color);
+    }
+    .fun-fact-item{
+        flex-basis: 25%;
+        padding: 16px 28px;
+        .fun-fact-card {
+            padding: 30px;
+            background-color: var(--background-color);
+            border: solid none;
+            border-radius: 25px;
+            .funt-fact-content {
+                margin-top: 5px;
+                line-height: 1.7;
             }
         }
     }

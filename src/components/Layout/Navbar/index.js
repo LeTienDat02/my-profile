@@ -7,9 +7,15 @@ import Tippy from "@tippyjs/react";
 import 'tippy.js/dist/tippy.css'; // optional
 import { faHome,faCircleUser, faGear,faAddressCard } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faGithub, faLinkedin, faTwitterSquare } from "@fortawesome/free-brands-svg-icons"
+import { useState } from "react";
 const cx = classNames.bind(styles)
 
 function Navbar() {
+
+    const [state, setState] = useState('home')
+    const check = (key) => (
+        (state === key) ? true : false
+    )
     return ( 
         <div className={cx('wrapper')}>
             <div className={cx('top-navbar')}>
@@ -18,22 +24,22 @@ function Navbar() {
                 </div>
                 <ul className="navbar-items">
                     <Tippy className={cx('item-hover')} content='Home' placement="right">
-                        <li>
+                        <li className={cx({'check' : check('home')},)}  onClick={() => setState('home')}>
                             <Link className={cx('icon-item')} to="/"><FontAwesomeIcon icon={faHome}/></Link>
                         </li>
                     </Tippy>
                    <Tippy className={cx('item-hover')} content='About' placement="right">
-                        <li>
+                        <li className={cx({'check' : check('about')})}  onClick={() => setState('about')}>
                             <Link className={cx('icon-item')} to="/about"><FontAwesomeIcon icon={faCircleUser} /></Link>
                         </li>
                    </Tippy>
                     <Tippy className={cx('item-hover')} content='Resume' placement="right">
-                        <li>
+                        <li className={cx({'check' : check('resume')})}  onClick={() => setState('resume')}>
                             <Link className={cx('icon-item')} to="/resume"><FontAwesomeIcon icon={faGear} /></Link>
                         </li>
                     </Tippy>
                     <Tippy className={cx('item-hover')} content='Contact' placement="right">
-                        <li>
+                        <li className={cx({'check' : check('contact')})}onClick={() => setState('contact')}>
                             <Link className={cx('icon-item')} to="/contact"><FontAwesomeIcon icon={faAddressCard} /></Link>
                         </li>
                     </Tippy>

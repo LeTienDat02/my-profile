@@ -9,6 +9,7 @@
     justify-content: space-between;
 }
 
+
 .wrapper {
     .top-navbar {
         width: 100%;
@@ -31,6 +32,7 @@
         li {
             margin: 3rem 0;
         }
+
     }
     .navbar-social {
         width: 100%;
@@ -40,6 +42,7 @@
 
         li {
             margin-bottom: 2rem;
+            
         }
 
         a {
@@ -61,6 +64,12 @@
     font-size: 14px;
     margin: 10px;
     color: #181818;
+}
+
+.check {
+    .icon-item {
+        color: var(--primary-color);
+    }
 }
 
 
