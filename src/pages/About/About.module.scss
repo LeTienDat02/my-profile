@@ -1,0 +1,65 @@
+.about-content {
+    width: 1000px;
+    height: 100%;
+}
+
+.about-me {
+    text-align: center;
+    font-size: 2.3rem;
+    line-height: 1.7;
+    color: var(--primary-text-main-color);
+    .about-me-content {
+        margin: 5px 60px 5px 60px;
+        strong {
+            color: var(--primary-color);
+        }
+        span {
+            font-weight: 250;
+        }
+    }
+    .about-me-items {
+        margin-top: 30px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        margin-left: 20px;
+        .download {
+            margin-right: 15px;
+            font-size: 1.4rem;
+            height: 100%;
+            .download-cv {
+                padding: 0 24px;
+                display: inline-block;
+                color: var(--primary-text-color);
+                border-radius: 25px;
+                background-color: var(--background-color);
+                height: 100%;
+                line-height: 44px;
+                span {
+                    font-size: 2rem;
+                    margin-right: 5px;
+                }
+                &:hover {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+    .about-me-icon {
+        font-size: 2.2rem;
+        margin: 0 15px;
+        width: 44px;
+        text-align: center;
+        .icon-item {
+            border-radius: 50%;
+            background: var(--background-color);
+            display: block;
+            height: 100%;
+            color: var(--primary-text-color);
+            line-height: 44px;
+            &:hover {
+                color: var(--primary-color);
+            }
+        }
+    }
+}
