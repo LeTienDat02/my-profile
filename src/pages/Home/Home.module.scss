@@ -1,35 +1,51 @@
 .img-backgound {
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    opacity: 0.6;
+  background-image: url(../../assets/images/home-backgound.jpg);
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #262628;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.6;
 }
 
 .home-content {
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 .my-name {
-    width: 100%;
-    position: absolute;
-    justify-content: center;
-    text-align: center;
-    color: var(--primary-text-color);
-    letter-spacing: 0.4rem;
-    word-spacing: 0.9rem;
-    font-size: 2rem;
-    h4{
-        font-size: 6.6rem;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  color: var(--primary-text-color);
+  letter-spacing: 0.4rem;
+  word-spacing: 0.9rem;
+  font-size: 2rem;
+  h4 {
+    font-size: 6.6rem;
+  }
+  span {
+    color: var(--primary-text-main-color);
+  }
+  p {
+    margin-top: 30px;
+  }
+}
+
+// RESPONSIVE - MOBILE - TABLET
+@media only screen and (max-width: 739px) {
+  .my-name {
+    font-size: 1.5rem;
+    h4 {
+      font-size: 5rem;
     }
-    span {
-        color: var(--primary-text-main-color);
-    }
-    p {
-        margin-top: 30px;
-    }
+  }
 }

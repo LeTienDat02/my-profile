@@ -15,7 +15,7 @@ import {
   faLightbulb,
   faPersonRunning,
   faChartArea,
-  faFutbol
+  faFutbol,
 } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./About.module.scss";
@@ -26,9 +26,8 @@ const cx = classNames.bind(styles);
 function About() {
   return (
     <div className={cx("about-content")}>
-
-        {/* About me */}
-      <div className={cx('about-content-title')}>
+      {/* About me */}
+      <div className={cx("about-content-title")}>
         <h1>ABOUT ME</h1>
       </div>
       <div className={cx("about-me")}>
@@ -72,7 +71,7 @@ function About() {
         </div>
       </div>
 
-        {/* Our Services */}
+      {/* Our Services */}
       <div className={cx("our-services")}>
         <p className={cx("about-title")}>
           <strong>
@@ -113,7 +112,7 @@ function About() {
         </div>
       </div>
 
-        {/* Fun Facts */}
+      {/* Fun Facts */}
       <div className={cx("fun-fact")}>
         <p className={cx("about-title")}>
           <strong>
@@ -122,67 +121,83 @@ function About() {
         </p>
         <div className={cx("fun-fact-items")}>
           <div className={cx("fun-fact-item")}>
-            <div className={cx('fun-fact-card')}>
-                <i><FontAwesomeIcon icon={faHeadphonesSimple} /></i>
-                <div className={cx('funt-fact-content')}>
-                    <strong>50 Albumes Listened</strong>
-                </div>
+            <div className={cx("fun-fact-card")}>
+              <i>
+                <FontAwesomeIcon icon={faHeadphonesSimple} />
+              </i>
+              <div className={cx("funt-fact-content")}>
+                <strong>50 Albumes Listened</strong>
+              </div>
             </div>
           </div>
           <div className={cx("fun-fact-item")}>
-            <div className={cx('fun-fact-card')}>
-                <i><FontAwesomeIcon icon={faTrophy} /></i>
-                <div className={cx('funt-fact-content')}>
-                    <strong>2 Awards <br/> Won</strong>
-                </div>
+            <div className={cx("fun-fact-card")}>
+              <i>
+                <FontAwesomeIcon icon={faTrophy} />
+              </i>
+              <div className={cx("funt-fact-content")}>
+                <strong>2 Awards Won</strong>
+              </div>
             </div>
           </div>
           <div className={cx("fun-fact-item")}>
-            <div className={cx('fun-fact-card')}>
-                <i><FontAwesomeIcon icon={faCode} /></i>
-                <div className={cx('funt-fact-content')}>
-                    <strong>50 000 Lines Of Code</strong>
-                </div>
+            <div className={cx("fun-fact-card")}>
+              <i>
+                <FontAwesomeIcon icon={faCode} />
+              </i>
+              <div className={cx("funt-fact-content")}>
+                <strong>50 000 Lines Of Code</strong>
+              </div>
             </div>
           </div>
           <div className={cx("fun-fact-item")}>
-            <div className={cx('fun-fact-card')}>
-                <i><FontAwesomeIcon icon={faLightbulb} /></i>
-                <div className={cx('funt-fact-content')}>
-                    <strong>2 Projects Completed</strong>
-                </div>
+            <div className={cx("fun-fact-card")}>
+              <i>
+                <FontAwesomeIcon icon={faLightbulb} />
+              </i>
+              <div className={cx("funt-fact-content")}>
+                <strong>2 Projects Completed</strong>
+              </div>
             </div>
           </div>
           <div className={cx("fun-fact-item")}>
-            <div className={cx('fun-fact-card')}>
-                <i><FontAwesomeIcon icon={faChartArea} /></i>
-                <div className={cx('funt-fact-content')}>
-                    <strong>1+ Year Investment</strong>
-                </div>
+            <div className={cx("fun-fact-card")}>
+              <i>
+                <FontAwesomeIcon icon={faChartArea} />
+              </i>
+              <div className={cx("funt-fact-content")}>
+                <strong>1+ Year Investment</strong>
+              </div>
             </div>
           </div>
           <div className={cx("fun-fact-item")}>
-            <div className={cx('fun-fact-card')}>
-                <i><FontAwesomeIcon icon={faBook} /></i>
-                <div className={cx('funt-fact-content')}>
-                    <strong>10+ Books <br/> Readed</strong>
-                </div>
+            <div className={cx("fun-fact-card")}>
+              <i>
+                <FontAwesomeIcon icon={faBook} />
+              </i>
+              <div className={cx("funt-fact-content")}>
+                <strong>10+ Books Readed</strong>
+              </div>
             </div>
           </div>
           <div className={cx("fun-fact-item")}>
-            <div className={cx('fun-fact-card')}>
-                <i><FontAwesomeIcon icon={faFutbol} /></i>
-                <div className={cx('funt-fact-content')}>
-                    <strong>Love <br/> Sports</strong>
-                </div>
+            <div className={cx("fun-fact-card")}>
+              <i>
+                <FontAwesomeIcon icon={faFutbol} />
+              </i>
+              <div className={cx("funt-fact-content")}>
+                <strong>A Big Fan Of Sports</strong>
+              </div>
             </div>
           </div>
           <div className={cx("fun-fact-item")}>
-            <div className={cx('fun-fact-card')}>
-                <i><FontAwesomeIcon icon={faPersonRunning} /></i>
-                <div className={cx('funt-fact-content')}>
-                    <strong>1000 Km <br/>Joged</strong>
-                </div>
+            <div className={cx("fun-fact-card")}>
+              <i>
+                <FontAwesomeIcon icon={faPersonRunning} />
+              </i>
+              <div className={cx("funt-fact-content")}>
+                <strong>1000 Km Joged</strong>
+              </div>
             </div>
           </div>
         </div>

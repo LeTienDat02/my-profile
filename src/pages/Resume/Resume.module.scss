@@ -1,108 +1,154 @@
 .resume {
-    width: 1000px;
-    height: 100vh;
-    margin-left: 50px;
+  width: 1000px;
+  height: 100vh;
+  margin-left: 50px;
 }
 
 .resume-title {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .my-resumes {
-    display: flex;
-    margin-top: 20px;
+  display: flex;
+  margin-top: 20px;
 
-    .my-resume {
-        flex-basis: 50%;
-        padding: 16px 28px;
+  .my-resume {
+    flex-basis: 50%;
+    padding: 16px 28px;
 
-        .my-resume-title {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--primary-text-color);
-            span {
-                color: var(--primary-color);
-            }
-        }
-
-        .my-resume-item {
-            padding: 40px;
-            background-color: var(--background-color);
-            border: solid none;
-            border-radius: 18px;
-            color: var(--primary-text-main-color);
-            
-            .title {
-                font-size: 1.6rem;
-                color: var(--primary-text-color);
-            }
-
-            .time {
-                font-size: 1.2rem;
-                margin: 5px 0 15px 0;
-                span {
-                    padding: 0 5px;
-                }
-            }
-
-            p {
-                font-size: 1.5rem;
-                line-height: 1.7;
-            }
-        }
+    .my-resume-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--primary-text-color);
+      span {
+        color: var(--primary-color);
+      }
     }
+
+    .my-resume-item {
+      padding: 40px;
+      background-color: var(--background-color);
+      border: solid none;
+      border-radius: 18px;
+      color: var(--primary-text-main-color);
+
+      .title {
+        font-size: 1.6rem;
+        color: var(--primary-text-color);
+      }
+
+      .time {
+        font-size: 1.2rem;
+        margin: 5px 0 15px 0;
+        span {
+          padding: 0 5px;
+        }
+      }
+
+      p {
+        font-size: 1.5rem;
+        line-height: 1.7;
+      }
+    }
+  }
 }
 
 .my-skills {
-    display: flex;
-    padding-top: 70px;
+  display: flex;
+  padding-top: 70px;
 
-    .my-skill {
-        flex-basis: 50%;
-        padding: 16px 28px;
-        color: var(--primary-text-color);
+  .my-skill {
+    flex-basis: 50%;
+    padding: 16px 28px;
+    color: var(--primary-text-color);
 
-        .title-skill {
-            padding-bottom: 32px;
-            font-size: 2rem;
-            
-            span {
-                color: var(--primary-color);
-            }
-        }
+    .title-skill {
+      padding-bottom: 32px;
+      font-size: 2rem;
 
-        .skills {
-            background-color: var(--background-color);
-            border: solid none;
-            border-radius: 18px;
-            .skill {
-                padding: 20px 30px;
-                font-size: 1.4rem;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                &:last-child {
-                    border: none;
-                }
-                .title {
-                    margin-bottom: 10px;
-                }
-                .percent{
-                    background-color: var(--primary-color);
-                    height: 6px;
-                    animation: pulse 1s none;
-                    max-width: 90%;
-                }
-            }
-        }
-        
+      span {
+        color: var(--primary-color);
+      }
     }
+
+    .skills {
+      background-color: var(--background-color);
+      border: solid none;
+      border-radius: 18px;
+      .skill {
+        padding: 20px 30px;
+        font-size: 1.4rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        &:last-child {
+          border: none;
+        }
+        .title {
+          margin-bottom: 10px;
+        }
+        .percent {
+          background-color: var(--primary-color);
+          height: 6px;
+          animation: pulse 1s none;
+          max-width: 90%;
+        }
+      }
+    }
+  }
 }
 
 @keyframes pulse {
-    0% {
-      width: 0px;
-    }
-    100% {
-      max-width: 100%;
+  0% {
+    width: 0px;
+  }
+  100% {
+    max-width: 100%;
+  }
+}
+
+//POSITION-MOBILE
+@media only screen and (max-width: 739px) {
+  .resume {
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+  .resume-title {
+    margin-top: 150px;
+  }
+
+  .my-resumes {
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    .my-resume {
+      flex-basis: 100%;
     }
   }
+
+  .my-skills {
+    flex-wrap: wrap;
+
+    .my-skill {
+      flex-basis: 100%;
+    }
+  }
+}
+
+// RESPONSIVE - TABLET
+@media only screen and (min-width: 739px) and (max-width: 1023px) {
+  .resume {
+    width: 100%;
+    height: 100vh;
+    margin-left: 0;
+  }
+  .resume-title {
+    margin-top: 150px;
+  }
+  .my-resume {
+    min-height: 208px;
+    .my-resume-item {
+      height: 100%;
+    }
+  }
+}

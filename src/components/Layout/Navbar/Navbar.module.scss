@@ -1,75 +1,157 @@
 .wrapper {
-    --primary-color: #07bc0c;
+  --primary-color: #07bc0c;
+  width: 100%;
+  height: 100vh;
+  background-color: #181818;
+  position: relative;
+ 
+}
+
+.wrapper {
+  .my-name {
     width: 100%;
-    height: 100vh;
-    background-color: #181818;
+    height: 60px;
+    background-image: linear-gradient(135deg, #2f6529, #5ac14e);
+
+    h3 {
+      font-family: "Times New Roman", Times, serif;
+      color: #ffffff;
+      font-size: 3.2rem;
+      text-align: center;
+      line-height: 60px;
+    }
+  }
+
+  .top-navbar {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-}
-
-
-.wrapper {
-    .top-navbar {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .my-name {
-            width: 100%;
-            height: 60px;
-            background-image: linear-gradient(135deg, #2f6529, #5ac14e);
-    
-            h3 {
-                font-family: 'Times New Roman', Times, serif;
-                color: #FFFFFF;
-                font-size: 3.2rem;
-                text-align: center;
-                line-height: 60px;
-            }
-        }
-        li {
-            margin: 3rem 0;
-        }
-
+    li {
+      margin: 3rem 0;
     }
-    .navbar-social {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  }
+  .navbar-social {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 30px;
 
-        li {
-            margin-bottom: 2rem;
-            
-        }
-
-        a {
-            font-size: 1.8rem;
-        }
+    li {
+      margin-bottom: 2rem;
     }
+
+    a {
+      font-size: 1.8rem;
+    }
+    .close {
+      display: none;
+    }
+  }
 }
 
 .icon-item {
-    color: var(--primary-text-main-color);
-    font-size: 2.2rem;
+  color: var(--primary-text-main-color);
+  font-size: 2.2rem;
 
-    &:hover {
-        color: var(--primary-text-color);
-    }
+  &:hover {
+    color: var(--primary-text-color);
+  }
 }
 
 .item-hover {
-    font-size: 14px;
-    margin: 10px;
-    color: #181818;
+  font-size: 14px;
+  margin: 10px;
+  color: #181818;
 }
 
 .check {
-    .icon-item {
-        color: var(--primary-color);
-    }
+  .icon-item {
+    color: var(--primary-color);
+  }
 }
 
+@media only screen and (max-width: 1023px) {
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    background-color: transparent;
+    ul {
+      display: flex;
+    }
 
+    .my-name {
+      max-width: 50px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+    .top-navbar {
+      background-color: #202020;
+      position: absolute;
+      height: 60px;
+      bottom: 0;
+      line-height: 60px;
+      animation: pulse 1s ease;
+
+      .navbar-items {
+        height: 100%;
+        li {
+          margin: 0 30px;
+        }
+      }
+    }
+    .navbar-social {
+      position: absolute;
+      top: 0;
+      height: 60px;
+      line-height: 60px;
+      justify-content: flex-end;
+      flex-direction: row;
+      background-color: #181818;
+      .social-item {
+        margin: 0 0;
+        .social-item {
+          margin-right: 20px;
+        }
+        .close {
+          display: block;
+          height: 61px;
+          width: 60px;
+          background-color: #202020;
+          font-size: 3rem;
+          text-align: center;
+          color: var(--primary-text-main-color);
+          position: relative;
+          display: flex;
+          align-items: center;
+          .btn-open {
+            width: 100%;
+            position: absolute;
+            justify-content: center;
+          }
+          .btn-close {
+            width: 100%;
+            font-size: 3.5rem;
+            position: absolute;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
