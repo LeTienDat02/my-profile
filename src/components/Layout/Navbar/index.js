@@ -40,7 +40,7 @@ function Navbar() {
         style={{ display: openNavbar ? "flex" : "none" }}
       >
         <ul className={cx("navbar-items")}>
-          <Tippy className={cx("item-hover")} style={{hideOnClick:true}} content="Home" placement="right">
+          <Tippy className={cx("item-hover")} content="Home" placement="right">
             <li
               className={cx({ check: check("home") })}
               onClick={() => setState("home")}
@@ -50,7 +50,7 @@ function Navbar() {
               </Link>
             </li>
           </Tippy>
-          <Tippy className={cx("item-hover")} style={{hideOnClick:true}} content="About" placement="right">
+          <Tippy className={cx("item-hover")}  content="About" placement="right">
             <li
               className={cx({ check: check("about") })}
               onClick={() => setState("about")}
@@ -64,7 +64,6 @@ function Navbar() {
             className={cx("item-hover")}
             content="Resume"
             placement="right"
-            style={{hideOnClick:true}}
           >
             <li
               className={cx({ check: check("resume") })}
@@ -79,7 +78,6 @@ function Navbar() {
             className={cx("item-hover")}
             content="Contact"
             placement="right"
-            style={{hideOnClick:true}}
           >
             <li
               className={cx({ check: check("contact") })}

@@ -1,9 +1,18 @@
 import classNames from "classnames/bind";
+import { useEffect, useState } from "react";
 import styles from "./Home.module.scss";
 
 const cx = classNames.bind(styles);
 
 function Home() {
+
+  const [job, setJob] = useState('')
+
+  useEffect(() => {
+    setTimeout(() => {
+      (job === 'Web Developer.') ? setJob('Data Analytics') : setJob('Web Developer.')
+    },2000)
+  },[job])
   return (
     <div className={cx("home-content")}>
       <div className={cx("img-backgound")}></div>
@@ -12,7 +21,7 @@ function Home() {
           <span>Dat </span>Tien Le
         </h4>
         <p>
-          <span>I Am A </span>Web Developer.
+          <span>I Am A </span>{job}
         </p>
       </div>
     </div>
