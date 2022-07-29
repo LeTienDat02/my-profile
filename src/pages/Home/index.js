@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 
 function Home() {
 
-  const [job, setJob] = useState('')
+  const [job, setJob] = useState('Web Developer.')
 
   useEffect(() => {
     setTimeout(() => {
